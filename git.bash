@@ -127,3 +127,16 @@ git log
 git merge sasprogit
 # delete the branch that was used to test changes
 git branch -d sasprogit
+# create a new directory and clone an existing Git repository to the directory
+cd ~
+mkdir SAS_Empty_Project
+cd SAS_Empty_Project
+# clone the empty sas project example
+git clone https://github.com/swelltrain/sas-empty-project.git
+# install openssh and generate a key for the ssh-agent
+ssh-keygen -t rsa -b 4096 -C "david.januszewski@rsagroup.ca"
+# modify the bashrc so that it runs the passphrase and agent when bash opens
+vim ~/.bashrc
+# add this git repository to Github
+git remote add origin https://github.com/djjansz/sasprogit.git
+git push -u origin master
