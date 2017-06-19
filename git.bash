@@ -1,0 +1,79 @@
+# run the cygwin septup and install bash, vim, cmkae, python, kde base apps, and the x windowing stystem and then check that they are working
+info startx 
+# start the x windowing system
+startx
+# run the cygwin setup and get all of the Git applications in the section "Development" after installing, view the help
+git
+# this is the same as
+git --help
+# see all subcommands of Git
+git help --all
+# help on a specific subcommand
+git merge --help
+# some subcommands have options, such as the amend option of the commit subcommand
+git commit --amend
+#short options only have a single hyphen 
+git commit -m "fixed typo"
+git commit --message="fixed typo"
+#turn a folder into a git repository
+cd ~/LFM*
+git init
+#add files individually to the repository
+git add autoexec.sas
+# add all files in the current directory to the repository
+git add .
+# check the status of the addition
+git status
+# fully qualified commit with author and commit log entry
+git commit -m "Initial contents of the LFM" \ --author =" David Januszewski <david.januszewski@rsagroup.ca>"
+# sort by descending (r for reverse) time modified with a long listing of file attributes (l)
+ls -trl
+# create a new file in vim
+vim
+# press i for insert mode, enter some text, press escape to go to command mode and enter :w filename1.txt, then press Shift+ZZ while in command mode
+cat filename1.txt
+# Set the git editor environment variable to vim so that we use vim with git
+export GIT_EDITOR=vim
+# You can set global author names that override other configuration settings
+export GIT_AUTHOR_NAME="David Januszewski"
+export GIT_AUTHOR_EMAIL="david.januszewski@rsagroup.ca"
+# You can save your identity in a configuration file
+git config user.name "David Januszewski"
+git config user.email "david.januszewski@rsagroup.ca"
+# Edit a file with vim - i for insert mode, esc for command mode, dd to delete a row, o to open a line above, x to delete, h,j,k,l are to navigate
+vim RSA_GLM_F*
+# add a comment or else it might abort the commit if no metadata is provided
+git commit RSA_GLM_Formats.sas -m "SAS Formats for the LFM"
+# view the history of commits
+git log
+# show more about one individual commit by using the commit ID
+git show e0c845c4ebb27dc21f1666ea1dc825b5f0b0b501
+# rename the Atlantic folder to get rid of the ampersand which Linux does not like. Then add the Atlantics LFM program folder.
+gvfs-rename "LFM_AT_R&D" "LFM_AT_RD"
+cd /cygdrive/e/sas/rfsl/RSA/RSA_PA/programs/LFM_AT_RD
+git init
+git add .
+git commit .
+#after commiting, add a line in quotes? at the top (no comment character #)
+ git show-branch --more=9
+git show 962df80caa726beee4174846edbf4b81fc1f7049
+#adding and deleting files
+git rm Build*
+git add Contents*
+git rm Buil*
+#now start creating a new program and commit it
+touch 'CW Datasets Used as Inputs.sas'
+vim CW*
+git add CW*
+git commit -m 'adding the first program'
+# Now clone the directory by going to the root directory and clone/copy the directory with the command git clone
+cd ..
+git clone LFM_AT_RD LFM_AT_CORE
+# use git config -l to see all of the global variables
+git config -l
+# use git unset to remove a global configuration value
+git config --unset --global user.email  
+# You can also create aliases for large commands in a similar fashon as with bash
+git config --global alias.show-graph \ 'log --graph --abbrev-commit --pretty = oneline' 
+
+
