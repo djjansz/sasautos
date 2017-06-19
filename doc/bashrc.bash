@@ -199,8 +199,8 @@ alias d:='cd /cygdrive/d'
 alias e:='cd /cygdrive/e'
 alias f:='cd /cygdrive/f'
 alias cls='clear'
-alias jilfm='e:/sas/rfsl/unifund/unifund_pa/unifund/production/iaam'
-alias rsalfm='e:/sas/rfsl/rsa/rsa_pa'
+alias jilfm='cd e:/sas/rfsl/unifund/unifund_pa/unifund/production/iaam'
+alias rsalfm='cd e:/sas/rfsl/rsa/rsa_pa'
 # set a nice looking prompt:
 PS1='\h:\W\$ '
 #------------------------------------------
