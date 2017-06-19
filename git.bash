@@ -108,3 +108,22 @@ git tag 1.0
 git branch sasprogit
 # check out the new branch and edit it without editing the original branch
 git checkout sasprogit
+# create a new branch to make some changes without touching the original version
+git branch sasprogit
+# checkout the new branch
+git checkout sasprogit
+# edit a fil in the new branch and commit the changes
+vim git.bash
+git commit -am "create a new branch and modify the code"
+git status
+git add .
+git status
+* view the differences from a recent commit
+git diff HEAD
+# switch back to the master after you are satisified with the changes
+git checkout master
+git log
+# if we are satisfied with the changes in sasprogit then merge the branch with the master
+git merge sasprogit
+# delete the branch that was used to test changes
+git branch -d sasprogit
