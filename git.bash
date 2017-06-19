@@ -75,5 +75,36 @@ git config -l
 git config --unset --global user.email  
 # You can also create aliases for large commands in a similar fashon as with bash
 git config --global alias.show-graph \ 'log --graph --abbrev-commit --pretty = oneline' 
-
-
+# create a folder and repository for the SAS-Git example
+mkdir ~/Git
+touch ~/Git/git.bash
+# add the first version to the bash program and save it
+vim ~/Git/git.bash
+# configure the system so that it uses someones name when committing files to
+git config -global user.name "Dave Januszewski"
+git config --global user.name "Dave Januszewski"
+git config --global user.email "david.januszewski@rsagroup.ca"
+git config --global user.name "David Januszewski"
+git init
+git add git.bash
+git commit -m "added git.bash"
+git log
+git status
+mkdir doc
+#add a subdirectory to the Git repository
+echo This directory contains examples of using Git with SAS > doc/readme.txt
+git status
+# create a file that tells Git which files not to track - a gitignore file
+touch .gitignore
+# on a separate line, add *.egp, *.sas7bdat, *.sas7bcat, *docx, *.doc, *txt, *.xlsx, *.xlsxm, *.accdb, *.mdb
+vim .gitignore
+git add .gitignore
+git status
+git commit -m "add a gitignore file so that we do not track sas datasets"
+git log
+# mark a major milestone with tag version 1
+git tag 1.0
+# create a new branch and give it a name
+git branch sasprogit
+# check out the new branch and edit it without editing the original branch
+git checkout sasprogit
