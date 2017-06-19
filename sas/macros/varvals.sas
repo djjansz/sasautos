@@ -2,7 +2,7 @@
  *    Name: VARVALS.sas                                              *
  *   Title: Create a table of variable characteristics               *            
  *-------------------------------------------------------------------*
- * Author:   David Januszewski   <david.januszewski@rsagroup.ca>     *
+ * Author:   David J                                                 *
  * Created:  28 Nov 2016                                             *
  * Version:  1                                                       *
  *-------------------------------------------------------------------*/

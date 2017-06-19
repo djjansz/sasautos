@@ -2,7 +2,7 @@
  *    Name: compare_libs.sas                                         *
  *   Title: Compare like datasets in cloned dataset libraries        *            
  *-------------------------------------------------------------------*
- * Author:   David Januszewski   <david.januszewski@rsagroup.ca>     *
+ * Author:   David J                                                 *
  * Created:  19 Jun 2017                                             *
  * Version:  1                                                       *
  *-------------------------------------------------------------------*/
