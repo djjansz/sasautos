@@ -1,0 +1,1 @@
+awk -F "\"*,\"*" '{print $2}'  file.csv > column_2.csv
